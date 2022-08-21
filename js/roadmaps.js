@@ -12,8 +12,10 @@ window.addEventListener('scroll', () => {
             .join('');
         return x * 1;
     };
+
     if (window.innerWidth > 800) {
         frontendRoadmap.style.transform = `translateX(-${located()}px)`;
         backendRoadmap.style.transform = `translateX(${located()}px)`;
+    } else {
     }
 });
