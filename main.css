@@ -87,6 +87,7 @@ body > header > div > ul > li > a:hover {
     position: relative;
     padding-top: 50px;
     height: 100vh;
+    /* overflow-x: hidden; */
 }
 .showcase-section > #laptop-for-mobile {
     display: none;
@@ -210,6 +211,7 @@ body > header > div > ul > li > a:hover {
     height: 100vh;
     min-height: 900px;
     padding-top: 50px;
+    /* overflow-x: hidden; */
 }
 
 .lower-section > header > div > h1 {
@@ -375,6 +377,7 @@ input[type='text'] {
         color: white;
         padding: 0 15px;
     }
+
     #header-trigger > button {
         background: none;
         border: none;
@@ -398,6 +401,7 @@ input[type='text'] {
         transition: all 300ms;
         margin-right: 1rem;
     }
+
     #header-closer:hover {
         color: white;
     }
@@ -432,11 +436,11 @@ input[type='text'] {
     /* showcase section in mobile */
     .showcase-section {
         text-align: center;
+        min-height: 840px;
     }
     .showcase-section > #laptop-for-mobile {
         display: unset;
-        margin-left: 27.5px;
-        /* border: 1px solid white; */
+        width: 95vw;
         margin-top: 2rem;
     }
 
@@ -474,30 +478,51 @@ input[type='text'] {
         margin-bottom: 1rem;
         width: 95vw;
     }
+    #service-section > header > div > h1 {
+        font-size: 4em;
+        bottom: -80px;
+        right: -150px;
+    }
     #service-section > header > div > p {
-        font-size: 1.3em;
+        font-size: 1em;
     }
     /* lower sections */
     .lower-section {
         margin-bottom: 3rem;
     }
+
+    /* roadmap section */
+    #roadmap-section {
+        overflow: hidden;
+    }
+
     .lower-section > #roadmaps > .flexer > div {
         margin: auto;
         margin-top: 3rem;
     }
 
+    .lower-section > header > div > h1 {
+        font-size: 2em;
+    }
+    .lower-section > header > div > p {
+        font-size: 1em;
+    }
     /* top projects section */
     #top-projects > div {
-        height: 500px;
+        height: 350px;
         width: 96vw;
         margin: 6rem auto;
         cursor: pointer;
     }
     #top-projects > div > img {
-        height: 300px;
+        height: 150px;
     }
     #top-projects > div > div {
         height: 200px;
+        gap: 0.3rem;
+    }
+    #top-projects > div > div > img {
+        margin: 0;
     }
     #top-projects > div > div > h4 {
         font-size: 1.3em;
@@ -511,10 +536,14 @@ input[type='text'] {
     #contact-section {
         height: 100vh;
         margin-bottom: 0;
+        height: 500px !important;
     }
+
     #contact-section form {
         width: 95vw;
         text-align: center;
+    }
+    #contact-section > header > div > h1 {
     }
     #contact-section form > label {
         font-size: 1.2em;

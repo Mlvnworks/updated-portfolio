@@ -13,6 +13,8 @@ window.addEventListener('scroll', () => {
         return x * 1;
     };
 
-    firstService.style.transform = `translateX(-${located()}px)`;
-    lastService.style.transform = `translateX(${located()}px)`;
+    if (window.innerWidth > 800) {
+        firstService.style.transform = `translateX(-${located()}px)`;
+        lastService.style.transform = `translateX(${located()}px)`;
+    }
 });
