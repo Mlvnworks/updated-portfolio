@@ -17,5 +17,11 @@ window.addEventListener('scroll', () => {
         frontendRoadmap.style.transform = `translateX(-${located()}px)`;
         backendRoadmap.style.transform = `translateX(${located()}px)`;
     } else {
+        if (window.scrollY + 500 > frontendRoadmap.offsetTop) {
+            frontendRoadmap.style.transform = `translateX(0)`;
+        }
+        if (window.scrollY + 500 > backendRoadmap.offsetTop) {
+            backendRoadmap.style.transform = `translateX(0)`;
+        }
     }
 });

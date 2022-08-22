@@ -14,12 +14,16 @@
                     <path d="M8.25 4.5H22.3125M1.6875 12H22.3125M1.6875 19.5H22.3125M1.6875 7.3125L4.5 4.5L1.6875 1.6875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
             </button>
-            <h1>mlvnWorks</h1>
+            <h1> <a href="#">
+                mlvnWorks
+            </a></h1>
         </div>
         <header id="main-header" class="slide-left">
             <div class="container flexer">
                 <div>
-                    <h1>mlvnWorks</h1>
+                    <h1> <a href="#"> 
+                        mlvnWorks
+                    </a></h1>
                     <button id="header-closer">X</button>
                 </div>
                 <ul class="flexer">
@@ -122,16 +126,16 @@
             </header>
             <div class="container" id="top-projects">
                 <div>
-                        <img src="./assets/images/coincount-stock-image.png" alt="image">
+                        <img src="./assets/images/coincount-stock-image.png" alt="image" id="project-thumbnail">
                     <div>
-                        <img src="./assets/images/showcase logo 1coincount-logo.png" alt="logo">
-                        <h4>coincount</h4>
-                        <button>
+                        <img src="./assets/images/showcase logo 1coincount-logo.png" alt="logo" id="project-logo">
+                        <h4 id="project-name">coincount</h4>
+                        <button id="visit-btn">
                             visit
                         </button>
                     </div>
                 </div>
-                <a href="#">Visit Github</a>
+                <a href="https://github.com/Mlvnworks" target="_blank">Visit Github</a>
             </div>
         </section>
         <section class="lower-section" id="contact-section">
@@ -141,24 +145,32 @@
                     <p>Message me</p>
                 </div>
             </header>
+            <div class="status-wrapper">
+                <h3 id="my-form-status" class="form-status"></h3>
+            </div>
             <div class="container">
-                <form action="#">
+                <form action="https://formspree.io/f/mgeqveoo"
+                method="POST" id="my-form">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email-input" placeholder="Enter your email...">
+                    <input type="email" name="email" id="email-input" placeholder="Enter your email..." required>
                     <br>
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject-input" placeholder="Why you want to message me?...">
+                    <label for="name-input">Name</label>
+                    <input type="text" name="name-input" id="name-input" placeholder="Enter your name..." required>
                     <br>
                     <label for="message">Message</label>
-                    <textarea name="message" id="message-input" cols="20" rows="10" placeholder="Message">
+                    <textarea name="message" id="message-input" cols="20" rows="10" placeholder="Message" required>
                     </textarea>
                     <input type="submit" value="Send">
                 </form>
             </div>
         </section>
+
+        <!-- scripts -->
         <script src="./js/headerEffect.js"></script>
         <script src="./js/showcaseSectionEffect.js"></script>
         <script src="./js/serviceSectionEffect.js"></script>
         <script src="./js/roadmaps.js"></script>
+        <script src="./js/topProjects.js"></script>
+        <script src="./js/contact.js"></script>
     </body>
 </html>
