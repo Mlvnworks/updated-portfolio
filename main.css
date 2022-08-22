@@ -47,6 +47,7 @@ body > header {
     z-index: 100;
     width: 100%;
 }
+
 body > header > div {
     justify-content: space-between;
 }
@@ -91,8 +92,9 @@ body > header > div > ul > li > a:hover {
     color: var(--secondary);
     position: relative;
     padding-top: 50px;
-    height: 100vh;
-    /* overflow-x: hidden; */
+    height: clamp(500px, 100vh, 1220px);
+    overflow: hidden;
+    overflow-x: hidden;
 }
 .showcase-section > #laptop-for-mobile {
     display: none;
@@ -103,6 +105,7 @@ body > header > div > ul > li > a:hover {
     /* top: 200px; */
     bottom: 0;
     width: 50vw;
+    max-width: 1000px;
 }
 
 .showcase-section > div {
@@ -110,13 +113,14 @@ body > header > div > ul > li > a:hover {
     align-items: center;
     justify-content: start;
     height: 100vh;
+    max-height: 1220px;
 }
 
 .showcase-section > div > div {
     max-width: 40vw;
 }
 .showcase-section > div > div > p {
-    font-size: 1.5vw;
+    font-size: min(3vw, 1rem);
     margin-bottom: 5rem;
 }
 .showcase-section > div > div > p > span {
@@ -156,17 +160,22 @@ body > header > div > ul > li > a:hover {
 
 /* services */
 #service-section {
-    min-height: 100vh;
+    height: clamp(900px, 100vh, 1220px);
     overflow-x: hidden;
 }
 #service-section > header {
     background-color: var(--primary);
-    transform: rotate(8deg) translateY(-120px) translateX(-50px);
+    transform: rotate(3deg) translateY(min(-100px, -20vh)) translateX(-50px);
     width: 120vw;
     display: flex;
     align-items: flex-end;
     justify-content: end;
     height: 300px;
+}
+@media (min-width: 1440px) {
+    #service-section > header {
+        transform: rotate(3deg) translateY(min(-100px, -20vh)) translateX(-50px);
+    }
 }
 
 #service-section > header > div {
@@ -183,6 +192,7 @@ body > header > div > ul > li > a:hover {
     /* color: white; */
     transform: translateY(-70px) translateX(-130px);
 }
+
 #service-section > header > div > p {
     color: white;
     font-size: 2em;
@@ -215,8 +225,7 @@ body > header > div > ul > li > a:hover {
 
 .lower-section {
     text-align: center;
-    height: 100vh;
-    min-height: 900px;
+    height: clamp(900px, 100vh, 1220px);
     padding-top: 50px;
     overflow-x: hidden;
 }
@@ -249,8 +258,9 @@ body > header > div > ul > li > a:hover {
     background-color: var(--primary);
     /* margin: auto; */
     height: 500px;
+    width: 90vw;
+    max-width: 900px;
     margin: 3rem auto;
-    width: clamp(70vw, 800px, 900px);
 }
 
 #top-projects > div > img {
@@ -309,6 +319,8 @@ body > header > div > ul > li > a:hover {
 #contact-section {
     background-color: var(--primary);
     padding-top: 100px;
+    max-width: 100vw !important;
+    overflow-x: hidden;
 }
 #contact-section > header {
     margin-bottom: 5rem;
@@ -332,7 +344,7 @@ body > header > div > ul > li > a:hover {
     color: white;
 }
 #contact-section form {
-    width: 900px;
+    width: min(90vw, 900px);
     margin: auto;
     text-align: end;
 }
@@ -470,7 +482,8 @@ input[type='text'] {
     /* showcase section in mobile */
     .showcase-section {
         text-align: center;
-        min-height: 950px;
+        /* height: 950px; */
+        height: fit-content;
     }
     .showcase-section > #laptop-for-mobile {
         display: unset;
@@ -501,6 +514,17 @@ input[type='text'] {
     }
 
     /* service section */
+    #service-section {
+        overflow: hidden;
+        overflow-x: hidden;
+        height: min-content;
+    }
+
+    #service-section > header {
+        height: 210px;
+        transform: translateY(-10px) rotate(3deg) translateX(-100px);
+        width: 140vw;
+    }
     #service-section > div > div {
         flex-direction: column;
         margin-top: 0;
@@ -524,15 +548,15 @@ input[type='text'] {
     #service-section > header > div > h1 {
         font-size: 4em;
         bottom: -80px;
-        right: -150px;
     }
     #service-section > header > div > p {
         font-size: 1em;
+        margin-right: 1rem;
     }
     /* lower sections */
     .lower-section {
         margin-bottom: 3rem;
-        min-height: 950px;
+        height: 1000px;
     }
 
     /* roadmap section */
@@ -553,6 +577,14 @@ input[type='text'] {
 
     .lower-section > #roadmaps > .flexer > div > h3 {
         font-size: 2rem;
+    }
+
+    .lower-section > #roadmaps > .flexer > div {
+        width: 95vw;
+        max-width: 350px;
+    }
+    .lower-section > #roadmaps > .flexer > div > h3 {
+        margin: unset;
     }
     .lower-section > #roadmaps > .flexer > div:nth-of-type(1) {
         transform: translate(100vw);
@@ -601,9 +633,7 @@ input[type='text'] {
 
     /* contact section */
     #contact-section {
-        height: 100vh;
         margin-bottom: 0;
-        height: 500px !important;
     }
 
     #contact-section > header > div > h1 {
@@ -613,6 +643,8 @@ input[type='text'] {
     #contact-section form {
         width: 95vw;
         text-align: center;
+        margin-top: 3rem;
+        padding-bottom: 0;
     }
 
     #contact-section form > label {

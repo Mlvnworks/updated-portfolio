@@ -25,3 +25,6 @@ window.addEventListener('scroll', () => {
         }
     }
 });
+
+frontendRoadmap.addEventListener('click', () => window.open('https://i.ibb.co/zP2mWZD/img-frontend.jpg'));
+backendRoadmap.addEventListener('click', () => window.open('https://i.ibb.co/YL5rF06/backend-roadmap.jpg'));

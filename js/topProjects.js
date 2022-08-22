@@ -47,6 +47,5 @@ visitBtn.addEventListener('click', () => window.open(link));
 window.addEventListener('scroll', () => {
     if (window.scrollY + 500 > topProjects.offsetTop) {
         topProjects.style.opacity = 1;
-        console.log(topProjects);
     }
 });
