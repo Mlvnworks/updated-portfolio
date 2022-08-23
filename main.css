@@ -383,7 +383,7 @@ input[type='text'] {
 
 .form-status {
     color: white;
-    width: 900px;
+    width: 100%;
     margin: auto;
     padding: 15px 0;
     display: none;
