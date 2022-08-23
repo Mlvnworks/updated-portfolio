@@ -388,6 +388,7 @@ input[type='text'] {
     padding: 15px 0;
     display: none;
 }
+
 .status-success {
     background-color: rgba(29, 199, 29, 0.42);
     display: block;
