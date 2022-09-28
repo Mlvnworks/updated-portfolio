@@ -270,6 +270,7 @@ body > header > div > ul > li > a:hover {
     object-fit: cover;
     object-position: center;
     padding: 10px;
+    cursor: pointer;
 }
 #top-projects > div > div {
     display: flex;

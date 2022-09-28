@@ -7,7 +7,7 @@ const topProjects = document.querySelector('#top-projects-section');
 const projects = [
     {
         name: 'Coincount',
-        thumbnail: './assets/images/coincount-stock-image.png',
+        thumbnail: './assets/images/coincount-image.jpg',
         logo: './assets/images/showcase logo 1coincount-logo.png',
         link: 'https://coincount.mlvnworks.com',
     },
@@ -16,6 +16,12 @@ const projects = [
         thumbnail: './assets/images/fwt-thumbnail.png',
         logo: './assets/images/farmWebTool-logo.png',
         link: 'https://farmWebTool.mlvnworks.com',
+    },
+    {
+        name: 'SWT writing Tools',
+        thumbnail: './assets/images/SWT-image.jpg',
+        logo: './assets/images/SWT-logo.png',
+        link: 'https://swt.mlvnworks.com',
     },
 ];
 
@@ -32,6 +38,10 @@ const changesShowProject = () => {
     projectThumbnail.src = currentThumbnail;
     projectLogo.src = currentLogo;
     projectName.textContent = currentName;
+
+    projectThumbnail.addEventListener('click', () => {
+        window.open(link);
+    });
 
     count = x + 1 >= projects.length ? 0 : x + 1;
 };
