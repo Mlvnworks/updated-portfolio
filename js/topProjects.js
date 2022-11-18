@@ -23,6 +23,12 @@ const projects = [
         logo: './assets/images/SWT-logo.png',
         link: 'https://swt.mlvnworks.com',
     },
+    {
+        name: 'img2txt',
+        thumbnail: './assets/images/img2txt_thumbnail.png',
+        logo: './assets/images/img2txt_logo.png',
+        link: 'https://img2txt.netlify.app/',
+    },
 ];
 
 let count = 0;
