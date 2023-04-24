@@ -109,13 +109,14 @@ textarea {
 body > section > div > form > input[type='email'],
 input[type='text'] {
     font-size: 1.1em;
-    padding: 5px 0;
+    padding: 10px 15px;
     /* background-color: var(--secondary); */
 }
 
 body > section > div > form > textarea {
     font-size: 1.2em;
     resize: none;
+    padding: 15px;
 }
 
 body > section > div > form > input[type='submit'] {
@@ -130,6 +131,7 @@ body > section > div > form > input[type='submit'] {
 body > section > div > form > input[type='submit']:active {
     transform: scale(0.9);
 }
+
 /* status wrapper */
 .form-status {
     color: white;
@@ -149,4 +151,29 @@ body > section > div > form > input[type='submit']:active {
 .status-error {
     background-color: rgb(202, 23, 23, 0.42);
     display: block;
+}
+
+/* Web Msg */
+.web-msg {
+    position: fixed;
+    padding: 20px;
+    height: fit-content;
+    bottom: 25px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 0;
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transform: translateX(-600px);
+    transition: all 1s;
+}
+
+.error-msg {
+    background-color: rgba(255, 0, 0, 0.349);
+}
+
+.success-msg {
+    background-color: rgba(55, 255, 0, 0.349);
 }

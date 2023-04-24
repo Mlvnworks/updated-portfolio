@@ -349,6 +349,7 @@ body > header > div > ul > li > a:hover {
     margin: auto;
     text-align: end;
 }
+
 #contact-section form > label {
     color: var(--secondary);
     font-size: 2em;
@@ -362,18 +363,20 @@ textarea {
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 #contact-section form > input[type='email'],
 input[type='text'] {
     font-size: 1.1em;
-    padding: 5px 0;
-    /* background-color: var(--secondary); */
+    padding: 10px 15px;
 }
 
 #contact-section form > textarea {
     font-size: 1.2em;
     resize: none;
+    padding: 15px;
 }
-#contact-section form > input[type='submit'] {
+
+#contact-section form > button {
     width: 120px;
     height: 35px;
     margin-top: 2rem;
@@ -398,9 +401,83 @@ input[type='text'] {
     background-color: rgb(202, 23, 23, 0.42);
     display: block;
 }
+
+/* request cv modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: #dddddd1f;
+    backdrop-filter: blur(5px);
+}
+
+.modal-box {
+    margin: auto;
+    background-color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    color: #fff;
+    width: clamp(290px, 40vw, 600px);
+}
+
+.request-cv-box label {
+    opacity: 0.8;
+    width: 100%;
+}
+
+#send-to-email,
+.request-cv-box input[type='submit'] {
+    display: block;
+    padding: 10px 15px;
+    font-size: clamp(18px, 1.4vw, 1.4rem);
+    border-radius: 10px;
+    margin: 0.5rem 0 2rem 0;
+    width: 100%;
+}
+
+.request-cv-box input[type='submit'] {
+    width: 100%;
+    cursor: pointer;
+    font-weight: 900;
+    background-color: #aaa;
+    color: #000;
+    border: none;
+    transition: all 200ms;
+}
+
+.request-cv-box input[type='submit']:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Web Msg */
+.web-msg {
+    position: fixed;
+    padding: 20px;
+    bottom: 25px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 0;
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transform: translateX(-600px);
+    transition: all 1s;
+}
+
+.error-msg {
+    background-color: rgba(255, 0, 0, 0.349);
+}
+
+.success-msg {
+    background-color: rgba(55, 255, 0, 0.349);
+}
+
 /*///////////////////////////////////////*/
 /* mobile size */
-@media (max-width: 50em) {
+@media (max-width: 800px) {
     .container {
         padding: 0;
     }
@@ -652,5 +729,10 @@ input[type='text'] {
     #contact-section form > label {
         font-size: 1.2em;
         text-align: center;
+    }
+
+    /* request cv modal */
+    .request-cv-box {
+        width: 95vw;
     }
 }
